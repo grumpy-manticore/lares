@@ -1,0 +1,18 @@
+services:
+  caddy:
+    image: caddy:2.7.6
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 80:80
+      - 443:443
+      - 443:443/udp
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_config:/config
+      - ./caddy_data:/data
+
+networks:
+  default:
+    name: $CADDY_NETWORK
+    external: true

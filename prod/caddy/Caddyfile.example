@@ -1,0 +1,7 @@
+example.{$CADDY_DOMAIN} {
+  reverse_proxy whoami:2001
+}
+
+auth.{$CADDY_DOMAIN} {
+  reverse_proxy authentik:9000
+}
