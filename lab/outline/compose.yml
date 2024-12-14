@@ -1,6 +1,6 @@
 services:
   outline:
-    image: docker.getoutline.com/outlinewiki/outline:0.76.1
+    image: docker.getoutline.com/outlinewiki/outline:0.81.1
     env_file: .env
     networks:
       - internal

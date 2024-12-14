@@ -31,7 +31,7 @@ services:
       - redis:/data
 
   authentik:
-    image: ghcr.io/goauthentik/server:2024.8.3
+    image: ghcr.io/goauthentik/server:2024.10.5
     restart: unless-stopped
     command: server
     env_file: .env
